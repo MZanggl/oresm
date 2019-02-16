@@ -1,0 +1,25 @@
+{
+  "name": "oresm",
+  "version": "1.0.0",
+  "description": "ObjectResourceMapper to deal with REST APIs",
+  "main": "src/oresm.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "oresm",
+    "rest",
+    "fetch",
+    "orm"
+  ],
+  "author": "Michael Zanggl",
+  "license": "ISC",
+  "dependencies": {
+    "fetch-me-json": "^1.0.3",
+    "pluralize": "^7.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
