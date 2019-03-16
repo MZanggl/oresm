@@ -1,10 +1,12 @@
 {
   "name": "oresm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ObjectResourceMapper to deal with REST APIs",
-  "main": "src/oresm.js",
+  "main": "dist/oresm.js",
   "scripts": {
-    "test": "mocha"
+    "build": "node node_modules/@babel/cli/bin/babel.js src --out-dir dist",
+    "prepublish": "npm run build",
+    "test": "npm run build && mocha"
   },
   "keywords": [
     "oresm",
@@ -15,11 +17,35 @@
   "author": "Michael Zanggl",
   "license": "ISC",
   "dependencies": {
-    "fetch-me-json": "^1.0.3",
-    "pluralize": "^7.0.0"
+    "fetch-me-json": "^2.0.0",
+    "pluralize": "^7.0.0",
+    "@babel/runtime": "^7.3.4"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "chai": "^4.2.0",
     "mocha": "^5.2.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "browsers": [
+              "last 4 versions"
+            ]
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread",
+      "@babel/plugin-transform-runtime"
+    ]
   }
 }

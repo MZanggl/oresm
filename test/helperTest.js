@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
-const { Model } = require('../src/oresm');
-const Helper = require('../src/helper');
+const { Model } = require('../dist/oresm');
+const Helper = require('../dist/helper');
 
 const helper = new Helper();
 

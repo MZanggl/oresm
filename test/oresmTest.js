@@ -1,6 +1,6 @@
 const chai = require('chai');
 const expect = chai.expect;
-const { Model } = require('../src/oresm');
+const { Model } = require('../dist/oresm');
 const FetchSpyFactory = require('./FetchSpyFactory');
 
 describe('fetch', function() {
