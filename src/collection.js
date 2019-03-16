@@ -1,8 +1,7 @@
 class Collection extends Array {
     constructor(...entities) {
-      super(...entities);
+        super(...entities);
     }
-  }
-  
+}
+
 module.exports = Collection;
-  
